@@ -1,0 +1,65 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background"
+    android:padding="16dip"
+    tools:context=".MainActivity"
+    android:gravity="center">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logotype"
+        android:layout_centerHorizontal="true"/>
+
+    <EditText
+        android:id="@+id/login_edt"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/logo"
+        android:layout_gravity="center_vertical"
+        android:editable="false"
+        android:ems="10"
+        android:hint="@string/edt_login"
+        android:singleLine="true"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/password_edt"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/login_edt"
+        android:layout_gravity="center"
+        android:ems="10"
+        android:hint="@string/edt_password"
+        android:imeOptions="actionGo"
+        android:singleLine="true"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/singup_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/password_edt"
+        android:layout_alignRight="@id/password_edt"
+        android:onClick="onSingUp"
+        android:text="@string/btn_singup" />
+
+    <Button
+        android:id="@+id/login_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/singup_btn"
+        android:layout_below="@+id/password_edt"
+        android:onClick="onStart"
+        android:text="@string/btn_login" />
+
+    <ProgressBar
+        android:id="@android:id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="invisible" />
+</RelativeLayout>
